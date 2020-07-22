@@ -7,12 +7,33 @@
     </variable>
 
     <variable name="Label_PVRGuide_SubTitle">
-        <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.StartTime,[COLOR main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,[COLOR main_fg_100]  -  ,[/COLOR]]$INFO[ListItem.Genre,  |  [COLOR main_fg_100],[/COLOR]]</value>
+    	<value condition="Skin.HasSetting(DisableLongPVRSubtitle)">$INFO[ListItem.StartTime,[COLOR main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,[COLOR main_fg_100]  -  ,[/COLOR]]$INFO[ListItem.Genre,  |  [COLOR main_fg_100],[/COLOR]]</value>
+        <value>$INFO[ListItem.StartTime,[COLOR main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,[COLOR main_fg_100]  -  ,[/COLOR]]$VAR[Label_SeasonEpisodeLabel_NoColon,  |  [COLOR main_fg_100],[/COLOR]]$INFO[ListItem.EpisodeName,  |  [COLOR main_fg_100],[/COLOR]]$INFO[ListItem.Genre,  |  [COLOR main_fg_100],[/COLOR]]</value>
     </variable>
 
     <variable name="Label_PVRGuide_ChannelNumber">
         <value condition="Skin.HasSetting(PVRGuide.ChannelNumber)">$INFO[ListItem.ChannelNumberLabel]</value>
     </variable>
+
+    <variable name="Label_TimersSubLabel">
+		<value condition="[Window.IsActive(tvtimerrules) | Window.IsActive(radiotimerrules)] + !ListItem.HasTimerSchedule">$INFO[ListItem.Timertype]</value>
+		<value>$INFO[ListItem.EpisodeName]</value>
+	</variable>
+	
+	<variable name="Label_ChannelListEPGIconVar">
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+    
+	<variable name="Label_SeasonEpisodeLabel">
+		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
+		<value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E,: ]</value>
+	</variable>
+
+	<variable name="Label_SeasonEpisodeLabel_NoColon">
+		<value condition="String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
+		<value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
+	</variable>
 
     <variable name="Label_Info_PlayButton">
         <value condition="ListItem.IsFolder">$LOCALIZE[1024]</value>
@@ -122,7 +143,7 @@
         <value condition="Window.IsVisible(Home)">$LOCALIZE[1034]</value>
         <value condition="Container.Content() + String.StartsWith(Container.FolderPath,library://video/movies/)">$LOCALIZE[14022]</value>
         <value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.ShowTitle)">$INFO[Container.ShowTitle]</value>
-        <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
+        <value condition="!String.IsEmpty(Container.FolderName) + !Integer.IsGreaterOrEqual(Container.FolderName,1)">$INFO[Container.FolderName]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$INFO[System.Date]</value>
     </variable>
 

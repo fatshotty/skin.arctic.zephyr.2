@@ -87,7 +87,7 @@
         <param name="seasons" default="true" />
         <param name="id" default="5229" />
         <param name="isView2" default="false" />
-        <param name="isRomTrailer" default="false" />
+		<param name="isRomTrailer" default="false" />
         <definition>
             <control type="group">
                 <include>View_FlipSides</include>
@@ -101,7 +101,7 @@
                     <param name="diffuse" value="diffuse/landscape-info.png" />
                     <param name="iconvisible" value="$PARAM[iconvisible]" />
                 </include>
-                <include content="View_540_Poster" condition="$PARAM[isRomTrailer]">
+				<include content="View_540_Poster" condition="$PARAM[isRomTrailer]">
                     <param name="height" value="441.435" />
                     <param name="width" value="761.44" />
                     <param name="icon" value="$PARAM[icon]" />

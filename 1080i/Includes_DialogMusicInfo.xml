@@ -128,6 +128,7 @@
                                 <include content="Object_Info_Button">
                                     <param name="id" value="6" />
                                     <param name="groupid" value="8006" />
+                                    <param name="width" value="auto" />
                                     <param name="label" value="Refresh" />
                                     <param name="icon" value="special://skin/extras/icons/update.png" />
                                     <param name="visible" value="Control.IsEnabled(6)" />
@@ -177,7 +178,7 @@
                         <include content="View_Cast_Toplabel">
                             <param name="groupid" value="7502" />
                             <param name="id" value="5002" />
-                            <param name="label" value="$INFO[Container(5001).ListItem.Title,Tracks from ,]" />
+                            <param name="label" value="$INFO[Container(5001).ListItem.Title,$LOCALIZE[31437] ,]" />
                             <visible>Control.IsVisible(5002)</visible>
                         </include>
                         <control type="panel" id="5002">
@@ -192,7 +193,11 @@
                                     <left>20</left>
                                     <right>20</right>
                                     <control type="label">
-                                        <width>30</width>
+                                        <include content="Object_Variable_Width">
+                                            <param name="std" value="30" />
+        									<param name="alt" value="40" />
+									        <param name="usealt" value="$EXP[FontSetIsMediumOrLarger]" />
+                                        </include>
                                         <font>font_small</font>
                                         <textcolor>main_fg_100</textcolor>
                                         <selectedcolor>main_fg_100</selectedcolor>
@@ -222,7 +227,11 @@
                                     <left>20</left>
                                     <right>20</right>
                                     <control type="label">
-                                        <width>30</width>
+                                        <include content="Object_Variable_Width">
+                                            <param name="std" value="30" />
+        									<param name="alt" value="40" />
+									        <param name="usealt" value="$EXP[FontSetIsMediumOrLarger]" />
+                                        </include>
                                         <font>font_small</font>
                                         <textcolor>main_bg_100</textcolor>
                                         <selectedcolor>main_bg_100</selectedcolor>

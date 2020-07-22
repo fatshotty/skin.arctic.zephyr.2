@@ -49,11 +49,7 @@
                         <param name="visible" value="true" />
                     </include>
                 </control>
-
             </control>
-        </control>
-        <control type="progress" id="3014">
-            <visible>false</visible>
-        </control>
+        </control>       
     </controls>
 </window>

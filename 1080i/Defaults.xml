@@ -212,6 +212,11 @@
 
     <expression name="Exp_GlobalBackground">[!Player.HasMedia | [Player.HasVideo + !Skin.HasSetting(global.showvideo)] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio] | [Player.HasAudio + !String.IsEmpty(Window(Home).Property(PlayingBackgroundMedia))]]</expression>
 
+	<expression name="FontSetIsDefault">String.IsEqual(Skin.Font,Default)</expression>
+	<expression name="FontSetIsMedium">String.IsEqual(Skin.Font,Roboto Regular)</expression>
+	<expression name="FontSetIsLarger">String.IsEqual(Skin.Font,Roboto Regular Larger)</expression>
+	<expression name="FontSetIsMediumOrLarger">String.Contains(Skin.Font,Roboto Regular)</expression>
+
 
     <include name="Defaults_FauneFonts">
         <!-- Plot Font -->
@@ -268,6 +273,66 @@
             <name>font_info_display</name>
             <style>bold</style>
             <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>64</size>
+        </font>
+    </include>
+
+    <include name="Defaults_RobotoRegularFonts">
+        <!-- Plot Font -->
+        <font>
+            <name>font_plotbox</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <linespacing>1</linespacing>
+            <size>29</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <size>26</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <linespacing>1.4</linespacing>
+            <aspect>0.9</aspect>
+            <size>48</size>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>64</size>
+        </font>
+    </include>
+
+    <include name="Defaults_RobotoRegularLargerFonts">
+        <!-- Plot Font -->
+        <font>
+            <name>font_plotbox</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <linespacing>1</linespacing>
+            <size>32</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_weather_small</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <size>29</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
+            <name>font_overlay_plotbox</name>
+            <filename>Roboto-Regular-Linespacing.ttf</filename>
+            <linespacing>1.4</linespacing>
+            <aspect>0.9</aspect>
+            <size>48</size>
+        </font>
+        <font>
+            <name>font_info_display</name>
+            <style>bold</style>
+            <filename>Roboto-Bold.ttf</filename>
             <size>64</size>
         </font>
     </include>

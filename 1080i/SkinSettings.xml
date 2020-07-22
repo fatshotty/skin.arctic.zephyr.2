@@ -95,6 +95,16 @@
                         <altlabel>[COLOR=Selected]$LOCALIZE[31422][/COLOR]</altlabel>
                     </control>
 
+                    <control type="togglebutton" id="9010" description="pkscout Mods">
+                        <onfocus>SetProperty(CurrentFocus,$NUMBER[9010])</onfocus>
+                        <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9010)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
+                        <width>550</width>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31900]</label>
+                        <altlabel>[COLOR=Selected]pkscout Mods[/COLOR]</altlabel>
+                    </control>
+
                     <control type="togglebutton" id="9008" description="Dependencies">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9008])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9008)</usealttexture>
@@ -691,26 +701,26 @@
                         <onclick condition="!String.IsEmpty(SkinHelper.AutoCloseMusicOSD)">Skin.Reset(SkinHelper.AutoCloseMusicOSD)</onclick>
                         <onclick condition="String.IsEmpty(SkinHelper.AutoCloseMusicOSD)">Skin.SetNumeric(SkinHelper.AutoCloseMusicOSD)</onclick>
                     </control>
-                    <control type="radiobutton" id="19518" description="Use short osd">
+                    <control type="radiobutton" id="19518" description="Use long music osd">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31132]</label>
-                        <selected>Skin.HasSetting(DisableMusicOSDClearLogo)</selected>
-                        <onclick>Skin.ToggleSetting(DisableMusicOSDClearLogo)</onclick>
+                        <selected>Skin.HasSetting(UseLongMusicOSD)</selected>
+                        <onclick>Skin.ToggleSetting(UseLongMusicOSD)</onclick>
                     </control>
                     <control type="radiobutton" id="19519" description="Show Artist Image">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005) + !Skin.HasSetting(UseLongMusicOSD)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31130]</label>
-                        <enable>!Skin.HasSetting(DisableMusicOSDClearLogo)</enable>
+                        <enable>!Skin.HasSetting(UseLongMusicOSD)</enable>
                         <selected>!Skin.HasSetting(DisableMusicOSDArtistImage)</selected>
                         <onclick>Skin.ToggleSetting(DisableMusicOSDArtistImage)</onclick>
                     </control>
                     <control type="radiobutton" id="19520" description="Square Artist">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005)</visible>
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9005) + !Skin.HasSetting(DisableMusicOSDArtistImage) + !Skin.HasSetting(UseLongMusicOSD)</visible>
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[31129]</label>
-                        <enable>!Skin.HasSetting(DisableMusicOSDArtistImage) + !Skin.HasSetting(DisableMusicOSDClearLogo)</enable>
+                        <enable>!Skin.HasSetting(DisableMusicOSDArtistImage) + !Skin.HasSetting(UseLongMusicOSD)</enable>
                         <selected>Skin.HasSetting(MusicOSDSquareArtist)</selected>
                         <onclick>Skin.ToggleSetting(MusicOSDSquareArtist)</onclick>
                     </control>
@@ -854,6 +864,64 @@
                         <onclick>Skin.ToggleSetting(MinimalBusyLoader)</onclick>
                     </control>
 
+                    <!-- ============= -->
+                    <!-- pkscout Mods  -->
+                    <!-- ============= -->
+
+                    <control type="label" id="19950" description="LABEL">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Dialog_Standard_HintLabel</include>
+                        <label>$LOCALIZE[31900]</label>
+                    </control>
+
+                    <control type="radiobutton" id="19951" description="Use High Contrast Colors">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31901]</label>
+                        <selected>!Skin.HasSetting(DisableBrighterWidgetText)</selected>
+                        <onclick>Skin.ToggleSetting(DisableBrighterWidgetText)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19952" description="Show page and item counts below weather/time">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31902]</label>
+                        <selected>!Skin.HasSetting(DisableShowItemCount)</selected>
+                        <onclick>Skin.ToggleSetting(DisableShowItemCount)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19953" description="Use detailed PVR timer list">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31903]</label>
+                        <selected>!Skin.HasSetting(DisableDetailedPVRList)</selected>
+                        <onclick>Skin.ToggleSetting(DisableDetailedPVRList)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19954" description="Use Long PVR Guide Subtitle">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31904]</label>
+                        <selected>!Skin.HasSetting(DisableLongPVRSubtitle)</selected>
+                        <onclick>Skin.ToggleSetting(DisableLongPVRSubtitle)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19955" description="Use enhanced PVR navigation">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31905]</label>
+                        <selected>!Skin.HasSetting(DisableEnhancedPVRNavigation)</selected>
+                        <onclick>Skin.ToggleSetting(DisableEnhancedPVRNavigation)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="19956" description="Use container art as fallback">
+                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9010)</visible>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31906]</label>
+                        <selected>!Skin.HasSetting(DisableParentArt)</selected>
+                        <onclick>Skin.ToggleSetting(DisableParentArt)</onclick>
+                    </control>
+ 
                     
                     <!-- ============ -->
                     <!-- Dependencies -->

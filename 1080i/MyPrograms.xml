@@ -33,7 +33,7 @@
             <include>View_524_Showcase_Seasons</include>
             <include>View_53_Poster</include>
             <include>View_540_List_ROM_Info</include>
-            <include>View_541_Wall_Info</include>
+			<include>View_541_Wall_Info</include>
             <include>Object_Scrollbars</include>
         </control>
         
