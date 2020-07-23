@@ -1,3 +1,10 @@
+
+0.9.61
+- Change monochrome icone with color icon
+- Small Fix
+- Add Italian Translation
+- Add Oscar and IMDB top 250 in some view
+
 0.9.60
 - Add pkscout mod
 
