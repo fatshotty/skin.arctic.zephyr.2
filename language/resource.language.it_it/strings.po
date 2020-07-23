@@ -139,7 +139,7 @@ msgstr "Finitura"
 #: /1080i/SkinSettings.xml
 msgctxt "#31025"
 msgid "Codec flags"
-msgstr "Codeg flag"
+msgstr "Icone Codec"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31026"
