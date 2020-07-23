@@ -172,6 +172,17 @@
             </item>
 
             <item>
+                <label>Enable Extra Art: $LOCALIZE[16041]</label>
+                <visible>!Skin.HasSetting(Enable.ExtraInfo)</visible>
+                <onclick>Skin.ToggleSetting(Enable.ExtraInfo)</onclick>
+            </item>
+            <item>
+                <label>Enable Extra Art: $LOCALIZE[16039]</label>
+                <visible>Skin.HasSetting(Enable.ExtraInfo)</visible>
+                <onclick>Skin.ToggleSetting(Enable.ExtraInfo)</onclick>
+            </item>
+            
+            <item>
                 <description>Rate Song</description>
                 <label>$LOCALIZE[31311]</label>
                 <onclick>Close</onclick>
