@@ -1,4 +1,4 @@
-<addon id="skin.arctic.zephyr.2.pkscout.mod" name="Arctic Zephyr 2 Mod (pkscout)" provider-name="jurialmunkey, pkscout" version="0.5.1">
+<addon id="skin.arctic.zephyr.2.mod" name="Arctic Zephyr 2 Mod" provider-name="jurialmunkey, pkscout, wsx79" version="0.9.61">
     <requires>
         <import addon="xbmc.gui" version="5.14.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
@@ -17,7 +17,10 @@
     <extension point="xbmc.addon.metadata">
     	<news>
 0.9.61
-            
+- Change monochrome icone with color icon
+- Small Fix
+- Add Italian Translation
+- Add Oscar and IMDB top 250 in some view          
     	</news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
