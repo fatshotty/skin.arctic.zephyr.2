@@ -404,6 +404,7 @@
                 <shortcut widget="DeletedRecordings" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=flat</shortcut>
                 <shortcut widget="GroupedDeletedRecordings" label="$LOCALIZE[31384]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=grouped</shortcut>
                 <shortcut widget="Timers" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
+                <shortcut widget="TVPVRRecodingWidget" label="TV PVR Recording Widget (must be in first position)" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">TV PVR Recording Widget</shortcut>
             </node>
             <node label="$LOCALIZE[29921]">
                 <content>widgets</content>

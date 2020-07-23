@@ -148,10 +148,11 @@
                             <param name="container" value="Container($PARAM[id])." />
                         </include>
                         <include content="Object_Info_Ratings" condition="$PARAM[isView2]">
-                            <param name="top" value="-15" />
+                            <!--<param name="top" value="-15" />
                             <param name="imdbvotes" value="false" />
                             <param name="top250" value="false" />
-                            <param name="oscars" value="false" />
+                            <param name="oscars" value="false" />-->
+                            <param name="imdbvotes" value="false" />
                         </include>
                         <control type="textbox">
                             <visible>!$PARAM[isView2]</visible>
