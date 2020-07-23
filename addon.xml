@@ -16,12 +16,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
     	<news>
-0.5.1
-- added option to allow artwork in empty parent directories
-- added ability to rotate through PVR channel groups in PVR OSD Channel display using left/right
-- bundled both PVR navigation enhancements into one setting
-- fixed display bug where studio/language tags were displayed in two locations
-- removed redundant mod for global fallback artwork image
+0.9.61
+            
     	</news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
@@ -39,7 +35,8 @@
         <summary lang="ro">Curat, minimalist, elegant, simplu, ușor</summary>
         <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
         
-        <description lang="en">This is a light mod of Arctic Zephyr 2 by pkscout. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.</description>
+        <description lang="en">This is a light mod of Arctic Zephyr 2 skin created by jurialmunkey. The skin is designed to be simple so that the user can focus on their media content.</description>
+        <description lang="it">Questa è una mod che apporta delle piccole modiche alla Skin Arctic Zephyr 2 creata da jurialmunkey. La skin è creata per essere semplice e focalizzata sui contenuti multimediali.</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
