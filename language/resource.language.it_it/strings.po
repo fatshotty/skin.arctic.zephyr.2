@@ -1488,6 +1488,11 @@ msgctxt "#31436"
 msgid "Info Wall 2"
 msgstr ""
 
+#: /1080i/Includes_View_51_Wall.xml
+msgctxt "#31437"
+msgid "Info Wall 3"
+msgstr ""
+
 #: /1080i/Includes_View_54_AEL.xml
 msgctxt "#31437"
 msgid "ROM Info Wall Trailer"
