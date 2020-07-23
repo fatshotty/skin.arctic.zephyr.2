@@ -80,3 +80,8 @@ msgstr "Highlight color"
 msgctxt "#31349"
 msgid "Initialising Skin"
 msgstr "Initializing Skin"
+
+#: /1080i/Includes_View_51_Wall.xml
+msgctxt "#31437"
+msgid "Info Wall 3"
+msgstr ""
