@@ -154,7 +154,7 @@ msgstr "Personalizza power menu"
 #: /1080i/SkinSettings.xml
 msgctxt "#31028"
 msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
-msgstr "Ripristina le impostazioni standard della skin (ATTENZIONE: resettera la tua home)"
+msgstr "Ripristina le impostazioni standard della skin (ATTENZIONE: resetta la tua home)"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31029"
@@ -349,7 +349,7 @@ msgstr "Importante"
 #: /1080i/Custom_1116_ColorBoxAdvancedSettings.xml
 msgctxt "#31067"
 msgid "Quality changes resolution of the generated image$COMMA which may also alter the intensity of the effect. Better quality images take longer to process.[CR]Blend layers the effect over the original image$COMMA with 100% showing the effect and 0% showing the original."
-msgstr "La qualita modifica la risoluzione delle immagini generate$COMMA che puo anche alterare l'intesita dell'effetto. L'elaborazione di immagini di qualita migliore richiede piu tempo.[CR] La fusione sovrappone l'effetto sull'immagine originale$COMMA con il 100% che mostra l'effetto e lo 0% che mostra l'originale."
+msgstr "La qualità modifica la risoluzione delle immagini generate$COMMA che puo anche alterare l'intesità dell'effetto. L'elaborazione di immagini di qualità migliore richiede più tempo.[CR] La fusione sovrappone l'effetto sull'immagine originale$COMMA con il 100% che mostra l'effetto e lo 0% che mostra l'originale."
 
 #: /1080i/Includes_Weather.xml
 msgctxt "#31068"
