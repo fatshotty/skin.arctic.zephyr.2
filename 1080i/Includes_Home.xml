@@ -2,7 +2,7 @@
 <includes>
     <include name="Home_Menu_Template">
         <param name="id" default="301" />
-        <param name="font" default="font_topbar" />
+        <param name="font" default="font_topbar_small" />
         <definition>
             <control type="grouplist">
                 <left>-15</left>
@@ -451,7 +451,7 @@
                                 <onleft>301</onleft>
                                 <onright>301</onright>
                                 <onback>301</onback>
-                                <font>font_topbar</font>
+                                <font>font_topbar_small</font>
                                 <align>right</align>
                                 <aligny>center</aligny>
                                 <textcolor>main_fg_30</textcolor>
@@ -536,7 +536,7 @@
                             <focusedlayout width="257.14" height="item_list_height" condition="!Skin.HasSetting(HomeIcons)">
                                 <control type="label">
                                     <right>40</right>
-                                    <font>font_topbar</font>
+                                    <font>font_topbar_small</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
                                     <textcolor>main_fg_100</textcolor>
@@ -573,7 +573,7 @@
                                 </control>
                                 <control type="label">
                                     <right>80</right>
-                                    <font>font_topbar</font>
+                                    <font>font_topbar_small</font>
                                     <align>right</align>
                                     <aligny>center</aligny>
                                     <textcolor>main_fg_100</textcolor>
@@ -808,7 +808,7 @@
                 </control>
                 <include content="Home_Horizontal_Fixed_List">
                     <param name="id" value="301" />
-                    <param name="font" value="font_topbar" />
+                    <param name="font" value="font_topbar_small" />
                     <include content="Animation_Home_MenuFlip_Conditional">
                         <param name="condition" value="[!Control.HasFocus(302) | !Skin.HasSetting(HomeMultiHorizontal) | !Skin.HasSetting(HomeMulti)]" />
                     </include>
@@ -864,14 +864,14 @@
                         <control type="label">
                             <aligny>center</aligny>
                             <width max="1140">auto</width>
-                            <font>font_topbar</font>
+                            <font>font_topbar_small</font>
                             <textcolor>main_fg_100</textcolor>
                             <label>$INFO[Container(301).ListItem.Label]</label>
                         </control>
                         <control type="label">
                             <aligny>center</aligny>
                             <width max="1140">auto</width>
-                            <font>font_topbar</font>
+                            <font>font_topbar_small</font>
                             <textcolor>main_fg_100</textcolor>
                             <label>$INFO[Container(302).ListItem.Label, - ,]</label>
                             <visible>Control.HasFocus(302)</visible>
