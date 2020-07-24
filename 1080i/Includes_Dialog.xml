@@ -471,8 +471,8 @@
     </include>
 
     <include name="Dialog_Standard_HintLabel">
-        <top>39</top>
-        <height>39</height>
+        <top>20</top>
+        <height>58</height>
         <left>30</left>
         <right>30</right>
         <font>font_hintlabel</font>
