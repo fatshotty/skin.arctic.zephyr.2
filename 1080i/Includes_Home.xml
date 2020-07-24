@@ -170,7 +170,7 @@
         <onright condition="!Skin.HasSetting(HomeIcons) + !Skin.HasSetting(HomeTextAutoWidth) + !Control.IsVisible(9999)">301</onright>
     </include>
 
-    <include name="Home_Simple">        
+    <include name="Home_Simple">    
         <!-- Global Widget -->
         <include>skinshortcuts-template-global</include>
 
@@ -620,7 +620,7 @@
                                 <include content="View_52_Showcase_Aura_Info">
                                     <param name="font" value="font_title" />
                                     <param name="plotheight" value="160" />
-                                    <param name="titleheight" value="60" />
+                                    <param name="titleheight" value="85" />
                                 </include>
                             </control>
                             <control type="group">
@@ -636,7 +636,7 @@
                                 <include content="Home_Vertical_Info">
                                     <param name="font" value="font_title" />
                                     <param name="plotheight" value="160" />
-                                    <param name="titleheight" value="60" />
+                                    <param name="titleheight" value="85" />
                                     <param name="id" value="993100" />
                                     <param name="uid" value="993" />
                                 </include>
@@ -1000,7 +1000,7 @@
                         <include content="View_52_Showcase_Aura_Info">
                             <param name="font" value="font_title" />
                             <param name="plotheight" value="160" />
-                            <param name="titleheight" value="60" />
+                            <param name="titleheight" value="85" />
                         </include>
                     </control>
                     <control type="group">
@@ -1014,7 +1014,7 @@
                         <include content="Home_Vertical_Info">
                             <param name="font" value="font_title" />
                             <param name="plotheight" value="160" />
-                            <param name="titleheight" value="60" />
+                            <param name="titleheight" value="85" />
                             <param name="id" value="993100" />
                             <param name="uid" value="993" />
                         </include>
